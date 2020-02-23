@@ -1,1 +1,3 @@
-# evernote-to-google-keep-migrator
+# Evernote to Google Keep migrator
+
+...work in progress
