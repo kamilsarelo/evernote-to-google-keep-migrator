@@ -58,6 +58,10 @@ In the second step, the application converts HTML-lists to plain-text-lists, rem
 
 In the final step, the application focuses the Google Keep window and starts adding a note - see the method **addNoteToKeep(Note)** in the **Controller** class. Besides Selenium, I use here the clipboard and key presses via the good old **java.awt.Robot** heavily for uploading the previously downloaded images to Google Keep.
 
+Noteworthy details:
+* Evernote's notebook name is used as a label in Google Keep
+* all notes containing images reiceive the label "image"
+
 [![Migrate selected](/assets/migrate_800.gif)](/assets/migrate_full.gif)
 
 ### Selecting and migrating the next note
