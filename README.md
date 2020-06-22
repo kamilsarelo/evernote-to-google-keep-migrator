@@ -12,7 +12,7 @@ When looking for an alternative on the market I stumbled upon Google Keep. It se
 
 Unfortunately, there is no direct and efficient way to migrate Evernote data to Google Keep since Google Keep lacks any import feature. So my idea was very simple: I will automate everything that I would have done manually - copy notes from Evernote and paste them manually one after another in Google Keep. Notes might require some additional adaptations since Evernote uses HTML and Google Keep close-to-plain-text, but this can be automated too.
 
-Since both services provide web interfaces I can use the Selenium framework for automated testing of web applications to accomplish the task. Basically, I need a web browser window with Evernote, another one with Google Keep, and an application that controls both. With the power of DOM in the browser, everything can be selected and manipulated. That is all I need 🙂 
+Since both services provide web interfaces I can use the [Selenium framework for automated testing of web applications](https://www.selenium.dev/) to accomplish the task. Basically, I need a web browser window with Evernote, another one with Google Keep, and an application that controls both. With the power of DOM in the browser, everything can be selected and manipulated. That is all I need 🙂 
 
 ## Dependencies
 
