@@ -27,11 +27,11 @@ Since both services provide web interfaces I can use the Selenium framework for 
 🚧👷 work in progress 👷🚧
 
 The Java code orchestrating everything is a simple MVC application:
-* the [Model](../../raw/master/filter.js) class provides the Evernote and Google Keep WebDrivers
+* the [Model]() class provides the Evernote and Google Keep WebDrivers
 * the [View]() class is the application's minimalistic UI with three buttons and takes care of arranging the WebDriver windows
 * the [Controller]() class is responsible of logging in to Evernote and Google Keep as well as migrating notes
 
-Additionally, the [EvernoteToGoogleKeepMigrator]() class gets everything up and running and the [Util]() class provides some shared common methods.
+Additionally, the [EvernoteToGoogleKeepMigrator]() class gets everything up and running and the [Utils](/src/Utils.java) class provides some shared common methods.
 
 ### Starting the application
 
