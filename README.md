@@ -35,7 +35,7 @@ Additionally, the [EvernoteToGoogleKeepMigrator]() class gets everything up and 
 
 ### Starting the application
 
-The application is started from Eclipse. The input source (keyboard layout) has to be set to **"US International PC"** before starting the application, otherwise the **"@"** character might not work properly in the WebDriver.
+The application is started from Eclipse. The operating system's input source (keyboard layout) has to be manually set to **"US International PC"** before starting the application, otherwise the **"@"** character will not work properly in the WebDriver.
 
 The application starts two WebDriver instances: one for Evernote, and one for Google Keep respectively. Both WebDriver windows are positioned next to each other just below the application's UI. Then the application logs in to both services. The usernames and passwords for both services are provided via Java system properties using command line arguments, or an Eclipse launch configuration, or any other IDE's run configuration.
 
