@@ -60,7 +60,7 @@ In the final step, the application focuses the Google Keep window and starts add
 
 Noteworthy details:
 * Evernote's notebook name is used as a label in Google Keep
-* all notes containing images reiceive the label "image"
+* all notes containing images receive the label "image"
 
 [![Migrate selected](/assets/migrate_800.gif)](/assets/migrate_full.gif)
 
