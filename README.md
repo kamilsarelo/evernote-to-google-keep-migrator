@@ -27,11 +27,11 @@ Since both services provide web interfaces I can use the [Selenium framework for
 🚧👷 work in progress 👷🚧
 
 The Java code orchestrating everything is a simple MVC application:
-* the [Model]() class provides the Evernote and Google Keep WebDrivers
-* the [View]() class is the application's minimalistic UI with three buttons and takes care of arranging the WebDriver windows
-* the [Controller]() class is responsible of logging in to Evernote and Google Keep as well as migrating notes
+* the [Model](/src/Model.java) class provides the Evernote and Google Keep WebDrivers
+* the [View](/src/View.java) class is the application's minimalistic UI with three buttons and takes care of arranging the WebDriver windows
+* the [Controller](/src/Controller.java) class is responsible of logging in to Evernote and Google Keep as well as migrating notes
 
-Additionally, the [EvernoteToGoogleKeepMigrator]() class gets everything up and running and the [Utils](/src/Utils.java) class provides some shared common methods.
+Additionally, the [EvernoteToGoogleKeepMigrator](/src/EvernoteToGoogleKeepMigrator.java) class gets everything up and running and the [Utils](/src/Utils.java) class provides some shared common methods.
 
 ### Starting the application
 
@@ -52,11 +52,11 @@ Once the application logged in to both services the fun part can begin! *(Note t
 
 ### Migrating a note
 
-A click on the button **"migrate the selected note in Evernote"** will first scrape the selected note in Evernote - see the method **scrapeNoteFromEvernote()** in the **Controller** class. Then the application finds all the images in a note and downloads them via Java-Selenium-JavaScript magic to the local file system. The download must be done in the browser session because of the login to Evernote. If required, the application scales the images down to fit the Google Keep limitations.
+A click on the button **"migrate the selected note in Evernote"** will first scrape the selected note in Evernote - see the **scrapeNoteFromEvernote()** method in the [Controller](/src/Controller.java) class. Then the application finds all the images in a note and downloads them via Java-Selenium-JavaScript magic to the local file system. The download must be done in the browser session because of the login to Evernote. If required, the application scales the images down to fit the Google Keep limitations.
 
-In the second step, the application converts HTML-lists to plain-text-lists, removes all HTML tags, removes unnecessary empty lines, etc - see the method **prepareNoteForKeep(Note)** in the **Controller** class. There are no limits to customizations here. For example, I used a special code that was fixing and unifying the units in ingredients or code that was unifying certain words across all recipes.
+In the second step, the application converts HTML-lists to plain-text-lists, removes all HTML tags, removes unnecessary empty lines, etc - see the **prepareNoteForKeep(Note)** method in the [Controller](/src/Controller.java) class. There are no limits to customizations here. For example, I used a special code that was fixing and unifying the units in ingredients or code that was unifying certain words across all recipes.
 
-In the final step, the application focuses the Google Keep window and starts adding a note - see the method **addNoteToKeep(Note)** in the **Controller** class. Besides Selenium, I use here the clipboard and key presses via the good old **java.awt.Robot** heavily for uploading the previously downloaded images to Google Keep.
+In the final step, the application focuses the Google Keep window and starts adding a note - see the **addNoteToKeep(Note)**  method in the [Controller](/src/Controller.java) class. Besides Selenium, I use here the clipboard and key presses via the good old **java.awt.Robot** heavily for uploading the previously downloaded images to Google Keep.
 
 Noteworthy details:
 * Evernote's notebook name is used as a label in Google Keep
