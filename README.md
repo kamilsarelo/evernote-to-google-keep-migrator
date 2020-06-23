@@ -24,8 +24,6 @@ Since both services provide web interfaces I can use the [Selenium framework for
 
 ## Application
 
-🚧👷 work in progress 👷🚧
-
 The Java code orchestrating everything is a simple MVC application:
 * the [Model](/src/Model.java) class provides the Evernote and Google Keep WebDrivers
 * the [View](/src/View.java) class is the application's minimalistic UI with three buttons and takes care of arranging the WebDriver windows
